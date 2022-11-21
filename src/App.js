@@ -1,5 +1,6 @@
 import React,{useState} from 'react';
 import Animal from './Animal';
+import './App.css'
 
 const App = () => {
     const [animals,setAnimals] = useState([])
@@ -20,9 +21,9 @@ const App = () => {
     const aniarray = animals.map((animal, index) => {
         return <Animal key={index} type={animal} />
     })
-    return(<div>
+    return(<div className='app'>
         <button onClick={handleClick}>Button</button>
-        {aniarray}
+        <div className='animal-list'>{aniarray}</div>
         </div>)
 };
 

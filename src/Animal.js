@@ -6,6 +6,7 @@ import bird from './svg/bird.svg'
 import gator from './svg/gator.svg'
 import heart from './svg/heart.svg'
 import dog from './svg/dog.svg'
+import './Animal.css'
 
 const Animal = ({type}) => {
     const mapAnimal = {
@@ -16,9 +17,9 @@ const Animal = ({type}) => {
         console.log(click)
     }
     const [click, setClick] = useState(0)
-    return(<div onClick={handleClick}>
-        <img alt={type} src={mapAnimal[type]} />
-        <img alt="heart" src={heart} style={{width:`${click*10}px`}}/>
+    return(<div className="AnimalScope" onClick={handleClick}>
+        <img className="animal" alt={type} src={mapAnimal[type]} />
+        <img className="heart" alt="heart" src={heart} style={{width:`${click*10}px`}}/>
     </div>)
 };
 
