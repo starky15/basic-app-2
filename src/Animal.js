@@ -13,8 +13,10 @@ const Animal = ({type}) => {
         bird, cat, dog, cow, gator, horse
     }
     const handleClick = () =>{
-        setClick(click + 1);
-        console.log(click)
+        if (click < 15){
+            setClick(click + 1);
+        }
+
     }
     const [click, setClick] = useState(0)
     return(<div className="AnimalScope" onClick={handleClick}>
